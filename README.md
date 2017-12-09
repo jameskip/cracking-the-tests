@@ -2,7 +2,7 @@
 
 # cracking-the-tests
 
-Run tests
+### Run tests
 ```
 npm test
 ```
