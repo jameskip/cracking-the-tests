@@ -1,4 +1,6 @@
-const { isUnique, checkPermutation, urlify, palindromePerm, oneAway, strCompress, rotMatrix, zeroMatrix, strRot } = require('./questions.js');
+const {
+  isUnique, checkPermutation, urlify, palindromePerm, oneAway, strCompress, rotMatrix, zeroMatrix, strRot,
+} = require('./questions.js');
 
 // 1.1: isUnique
 test('1.1: checks if string is unique', () => {
@@ -44,7 +46,7 @@ xtest('1.8: should rotate NxN matrix', () => {
 
 });
 
-// 1.9 strRot TODO
+// 1.9 strRot
 test('1.9: should check if string 2 is rotation of string 1', () => {
   expect(strRot('waterbottle', 'erbottlewat')).toBe(true);
 });
