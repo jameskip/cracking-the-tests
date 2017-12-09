@@ -2,6 +2,11 @@
 
 # cracking-the-tests
 
+### Install Dependencies
+```
+npm install
+```
+
 ### Run tests
 ```
 npm test
