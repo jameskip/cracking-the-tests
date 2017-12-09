@@ -140,8 +140,14 @@ const zeroMatrix = matrix => {
 
 const strRot = (s1, s2) => {
   if (s1.length !== s2.length) return false;
-  
+
+  return isSubstring(s1 + s1, s2);
 };
+
+// helper function
+const isSubstring = (s1, s2) => {
+  return s1.includes(s2);
+}
 
 
 

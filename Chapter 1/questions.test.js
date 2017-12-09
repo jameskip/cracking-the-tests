@@ -45,6 +45,6 @@ xtest('1.8: should rotate NxN matrix', () => {
 });
 
 // 1.9 strRot TODO
-xtest('1.9: should check if string 2 is rotation of string 1', () => {
+test('1.9: should check if string 2 is rotation of string 1', () => {
   expect(strRot('waterbottle', 'erbottlewat')).toBe(true);
 });
