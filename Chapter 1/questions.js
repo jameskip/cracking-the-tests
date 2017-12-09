@@ -61,7 +61,89 @@ const urlify = string => string.split(' ').join('%20');
 // Input: Tact Coa
 // Output: True (permutations: "taco cat". "atco cta". etc.)
 
+const palindromePerm = string => {
+
+}
+
+// 1.5
+// One Away: There are three types of edits that can be performed on strings:
+// insert a character, remove a character, or replace a character. Given two strings,
+// write a function to check if they are one edit (or zero edits) away.
+// EXAMPLE
+// pale, ple -> true pales. pale -> true pale. bale -> true pale. bake -> false
+
+const oneAway = (str1, str2) => {
+  if (str1.length - 1 > str2.length || str1.length + 1 < str2.length) {
+    return false;
+  }
+
+  let isEdited = false;
+  for (let i = 0, j = 0; i < str1.length && j < str2.length; i++, j++) {
+    if (str1[i] !== str2[j]) {
+      if (isEdited) {
+        return false;
+      }
+      if (str1.length > str2.length) {
+        j--;
+      } else if (str2.length > str1.length) {
+        i--;
+      }
+      isEdited = true;
+    }
+  }
+  return true;
+}
+
+// 1.6
+// String Compression: Implement a method to perform basic string compression using the counts of repeated characters.
+// For example, the string aabcccccaaa would become a2b1c5a3. If the "compressed" string would not become smaller than the original string,
+// your method should return the original string. You can assume the string has only uppercase and lowercase letters (a - z).
+
+const strCompress = string => {
+  let newStr = "";
+  let count = 1;
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === string[i + 1]) {
+      count++;
+    }
+    if (string[i] !== string[i + 1]) {
+      newStr += string[i] + count;
+      count = 1;
+    }
+  }
+
+  return newStr.length > string.length ? string : newStr;
+};
+
+// 1.7
+// Rotate Matrix: Given an image represented by an NxN matrix,
+// where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees.
+// Can you do this in place?
+
+const rotMatrix = matrix => {
+
+};
+
+// 1.8
+// Zero Matrix: Write an algorithm such that if an element in an MxN matrix is 0,
+// its entire row and column are set to O.
+
+const zeroMatrix = matrix => {
+
+};
+
+// 1.9
+// String Rotation: Assume you have a method isSubstring which checks if one word is a substring of another.
+// Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring
+// (e.g.,"waterbottle"is a rotation of "erbottlewat").
+
+const strRot = (s1, s2) => {
+  if (s1.length !== s2.length) return false;
+  
+};
 
 
 
-module.exports = { isUnique, checkPermutation, urlify };
+
+module.exports = { isUnique, checkPermutation, urlify, palindromePerm, oneAway, strCompress, rotMatrix, zeroMatrix, strRot };
