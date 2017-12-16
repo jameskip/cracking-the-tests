@@ -3,7 +3,7 @@
 # cracking-the-tests
 Spoiler alert: Answers to Cracking the Coding Interview 6th Edition.
 
-### Install Dependencies
+### Install dependencies
 ```
 npm install
 ```
