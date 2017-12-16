@@ -139,12 +139,19 @@ const zeroMatrix = (matrix) => {
 // Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring
 // (e.g.,"waterbottle"is a rotation of "erbottlewat").
 
-const strRot = (s1, s2) => (s1.length !== s2.length ? false : isSubstring(s1 + s1, s2));
-
 // helper function
 const isSubstring = (s1, s2) => s1.includes(s2);
 
+const strRot = (s1, s2) => (s1.length !== s2.length ? false : isSubstring(s1 + s1, s2));
 
 module.exports = {
-  isUnique, checkPermutation, urlify, palindromePerm, oneAway, strCompress, rotMatrix, zeroMatrix, strRot,
+  isUnique,
+  checkPermutation,
+  urlify,
+  palindromePerm,
+  oneAway,
+  strCompress,
+  rotMatrix,
+  zeroMatrix,
+  strRot,
 };
